@@ -1,0 +1,107 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.game {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.balao {
+    height: 100vh;
+    width: 100px;
+    display: flex;
+    align-items: start;
+    top: 0;
+    position: absolute;
+    top: 1100px;
+}
+
+
+.anim {
+    animation: balaoSubindo 5s linear infinite;
+}
+
+.balao img {
+    height: 30%;
+    animation: animBalao 5s linear infinite;
+}
+
+.img:nth-child(3n +1) {
+    margin-top: 100px;
+
+}
+
+.img-2 {
+    margin-top: 200px;
+}
+
+.img-3 {
+    margin-top: 50px
+}
+
+.img-9 {
+     margin-top: 50px
+}
+
+.img-8 {
+     margin-top: 150px
+}
+.img-5 {
+    margin-top: -75px;
+}
+
+@keyframes balaoSubindo {
+    0% {
+        left: -30px;
+    }
+
+    25% {
+        left: 20px;
+    }
+
+    50% {
+        left: -40px;
+    }
+
+    75% {
+        left: 20px;
+    }
+    
+    100% {
+        top: -600px;
+        left: -10px;
+    }
+}
+
+@keyframes animBalao {
+    25% {
+        transform: rotate(8deg);
+    }
+    37.5% {
+        transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(-8deg);
+    }
+    62.5% {
+        transform: rotate(-2deg);
+    }
+
+    75% {
+        transform: rotate(8deg);
+    }
+    87.5% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-8deg);
+    }
+}
