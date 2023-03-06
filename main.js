@@ -10,6 +10,7 @@ function subForm() {
     if (tentativas > 6 && chuteNum != numVez) {
         vd = false;
         document.querySelector("#numTenta").innerHTML = `Você perdeu, fracassado!!! <br>O número era ${numVez}`;
+        document.querySelector('.balao').classList.add('opacity-0');
         return;
     }
 
