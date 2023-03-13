@@ -5,13 +5,23 @@ console.log(numVez);
 let balao = document.querySelector(".balao");
 let vd = false;
 let dv = true;
+let somVit = document.querySelector('#somVitoria');
+let recarregar = document.createElement("input");
+recarregar.setAttribute("value", "Recarregar");
+recarregar.setAttribute("type", "button");
+recarregar.setAttribute("id", "recarregarBtn");
 
+let center = document.createElement("div");
+// center.classList.add("center");
 
 function subForm() {
     chuteNum = document.querySelector("#advNum").value;
     if (tentativas > 6 && chuteNum != numVez && vd == false) {
         dv = false;
-        document.querySelector("#numTenta").innerHTML = `Você perdeu, fracassado!!! <br>O número era ${numVez}`;
+        document.querySelector("#numTenta").classList.add("center");
+        document.querySelector("#numTenta").innerHTML = `Você perdeu, FRACASSADO <br>O numero da vez era ${numVez}`;
+        center.appendChild(recarregar)
+        document.querySelector("#numTenta").append(center);
         document.querySelector('.balao').classList.add('opacity-0');
         return;
     }
@@ -29,17 +39,28 @@ function subForm() {
     }
 
     if (chuteNum == numVez && dv == true) {
-        vd = true;
-        if (tentativas == 0) {
+        if (vd == false) {
             tentativas++;
         }
-        document.querySelector("#numTenta").innerHTML = `Parabéns você advinhou o número da vez em ${tentativas} tentativas`;
+        vd = true;
+        document.querySelector("#numTenta").classList.add("center");
+        document.querySelector("#numTenta").innerHTML = `Parabéns você advinhou o número da vez em ${tentativas} tentativas<br>`;
         balao.classList.add("anim")
+        somVit.setAttribute('autoplay', 'autoplay');
+        center.appendChild(recarregar);
+        document.querySelector("#numTenta").append(center);
 
         return;
     }
 
 }
+
+recarregar.onclick = function resetPage() {
+    location.reload();
+
+}
+
+
 
 document.querySelector(".game").addEventListener("submit", function (event) {
     event.preventDefault();

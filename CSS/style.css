@@ -5,12 +5,24 @@ body {
     overflow: hidden;
 }
 
+audio {
+    position: absolute;
+}
+
 .game {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .balao {
