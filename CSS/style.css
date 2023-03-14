@@ -34,13 +34,13 @@ audio {
 
 .page>input:hover {
     transform: scale(1.05);
-    box-shadow: 5px 5px;
+    box-shadow: 0 0 5px 0;
 
 }
 
 .page>input:focus {
     transform: scale(1.05);
-    box-shadow: 5px 5px;
+    box-shadow: 0 0 5px 0;
 
 }
 
@@ -68,6 +68,7 @@ audio {
     height: 75%;
     border-radius: 100px;
     transition: 1s;
+    box-shadow: 0 0 30px 15px;
 }
 
 .center {
