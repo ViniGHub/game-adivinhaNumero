@@ -18,21 +18,21 @@ audio {
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 
-.page > h1 {
+.page>h1 {
     font-size: 50px;
     font-weight: bolder;
     margin: 150px 0;
 
 }
 
-.page > input {
+.page>input {
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
     transition: 1s;
 }
 
-.page > input:hover {
+.page>input:hover {
     transform: scale(1.05);
     box-shadow: 5px 5px;
 
@@ -44,7 +44,7 @@ audio {
 
 }
 
-.page > button {
+.page>button {
     border: none;
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
     text-decoration: solid;
@@ -115,12 +115,13 @@ audio {
 }
 
 .img-9 {
-     margin-top: 50px
+    margin-top: 50px
 }
 
 .img-8 {
-     margin-top: 150px
+    margin-top: 150px
 }
+
 .img-5 {
     margin-top: -75px;
 }
@@ -141,7 +142,7 @@ audio {
     75% {
         left: 20px;
     }
-    
+
     100% {
         top: -600px;
         left: -10px;
@@ -152,12 +153,15 @@ audio {
     25% {
         transform: rotate(8deg);
     }
+
     37.5% {
         transform: rotate(2deg);
     }
+
     50% {
         transform: rotate(-8deg);
     }
+
     62.5% {
         transform: rotate(-2deg);
     }
@@ -165,6 +169,7 @@ audio {
     75% {
         transform: rotate(8deg);
     }
+
     87.5% {
         transform: rotate(2deg);
     }
