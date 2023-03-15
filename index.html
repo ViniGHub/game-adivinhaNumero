@@ -7,16 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
 
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+        rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
 <body>
     <form class="game">
         <div class="page">
-            <h1>Jogo de advinhar</h1>
+            <h1>Jogo de adivinhar</h1>
             <h3>Tente advinhar o número da vez <br>(0-100)</h3>
             <label for="advNum">Escolha um numero</label>
-            <input type="number" id="advNum">
+            <input type="number" id="advNum"><span id="icon"><i id="fa-regular" class="fa-regular fa-hand-pointer"></i></span>
             <button id="TentaBtn" type="button"><span>Enviar</span></button><br>
             <h3 id="numTenta"></h3>
         </div>
