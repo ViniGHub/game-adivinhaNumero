@@ -54,6 +54,7 @@ audio {
     /* color: #ebf8e1; */
     font-size: 20px;
     font-weight: 600;
+    transition: .5s;
 
 }
 
@@ -69,6 +70,17 @@ audio {
     border-radius: 100px;
     transition: 1s;
     box-shadow: 0 0 30px 15px;
+}
+
+#TentaBtn:hover {
+    transform: scale(1.1);
+
+}
+
+#TentaBtn:active {
+    transform: scale(1);
+    transition: .2;
+
 }
 
 .center {
