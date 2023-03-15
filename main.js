@@ -29,13 +29,37 @@ function subForm() {
     if (chuteNum > numVez && vd == false) {
         tentativas++;
         document.querySelector("#numTenta").innerHTML = `Você tentou advinhar ${tentativas} vezes`;
-        document.querySelector("#numTenta").innerHTML += `<br>Muito alto`;
+        if (chuteNum - numVez >= 30) {
+            document.querySelector("#numTenta").innerHTML += `<br>Muito alto`;
+
+        } else if (chuteNum - numVez > 20 && chuteNum - numVez < 30) {
+            document.querySelector("#numTenta").innerHTML += `<br>Alto`;
+
+        } else if (chuteNum - numVez > 10 && chuteNum - numVez < 20) {
+            document.querySelector("#numTenta").innerHTML += `<br>Um pouco alto`;
+
+        } else if (chuteNum - numVez > 1 && chuteNum - numVez < 10) {
+            document.querySelector("#numTenta").innerHTML += `<br>Desce mais um pouquinho!!`;
+            
+        }
     }
 
     if (chuteNum < numVez && vd == false) {
         tentativas++;
         document.querySelector("#numTenta").innerHTML = `Você tentou advinhar ${tentativas} vezes`;
-        document.querySelector("#numTenta").innerHTML += `<br>Muito baixo`;
+       if (Math.abs(chuteNum - numVez) >= 30) {
+           document.querySelector("#numTenta").innerHTML += `<br>Muito Baixo`;
+
+       } else if (Math.abs(chuteNum - numVez) > 20 && Math.abs(chuteNum - numVez) < 30) {
+           document.querySelector("#numTenta").innerHTML += `<br>Baixo`;
+
+       } else if (Math.abs(chuteNum - numVez) > 10 && Math.abs(chuteNum - numVez) < 20) {
+           document.querySelector("#numTenta").innerHTML += `<br>Um pouco baixo`;
+
+       } else if (Math.abs(chuteNum - numVez) > 1 && Math.abs(chuteNum - numVez) < 10) {
+           document.querySelector("#numTenta").innerHTML += `<br>Sobe mais um pouquinho!!`;
+
+       }
     }
 
     if (chuteNum == numVez && dv == true) {
