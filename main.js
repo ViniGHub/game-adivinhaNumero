@@ -46,7 +46,12 @@ function subForm() {
 
     if (chuteNum < numVez && vd == false) {
         tentativas++;
-        document.querySelector("#numTenta").innerHTML = `Você tentou advinhar ${tentativas} vezes`;
+        if (tentativas == 1) {
+            document.querySelector("#numTenta").innerHTML = `Você tentou advinhar ${tentativas} vez`;
+        } else {
+            document.querySelector("#numTenta").innerHTML = `Você tentou advinhar ${tentativas} vezes`;
+        }
+        
         if (Math.abs(chuteNum - numVez) >= 30) {
             document.querySelector("#numTenta").innerHTML += `<br>Muito Baixo`;
 
@@ -91,8 +96,19 @@ document.querySelector(".game").addEventListener("submit", function (event) {
 
 document.querySelector("#TentaBtn").onclick = function () {
     subForm();
+    document.querySelector("#advNum").style.transform = "scale(1.05)";
+    document.querySelector("#advNum").style.width = "35%";
+    document.querySelector("#advNum").style.boxShadow = "0 0 5px 0";
+    document.querySelector("#fa-regular").classList.remove("fa-regular", "fa-hand-pointer");
 
 }
+
+document.querySelector("#advNum").blur(function (){
+    document.querySelector("#advNum").style.transform = "0";
+    document.querySelector("#advNum").style.width = "0";
+    document.querySelector("#advNum").style.boxShadow = "0";
+
+})
 
 document.querySelector("#advNum").addEventListener("click", function () {
     let tira = false;
