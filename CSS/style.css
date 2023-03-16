@@ -213,3 +213,10 @@ input::-webkit-inner-spin-button {
         transform: rotate(-8deg);
     }
 }
+
+@media (max-height: 970px) {
+    .page>h1 {
+        margin: 25% 0;
+    }
+    
+}
