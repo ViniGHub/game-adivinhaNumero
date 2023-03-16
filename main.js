@@ -32,13 +32,13 @@ function subForm() {
         if (chuteNum - numVez >= 30) {
             document.querySelector("#numTenta").innerHTML += `<br>Muito alto`;
 
-        } else if (chuteNum - numVez > 20 && chuteNum - numVez < 30) {
+        } else if (chuteNum - numVez > 19 && chuteNum - numVez < 30) {
             document.querySelector("#numTenta").innerHTML += `<br>Alto`;
 
-        } else if (chuteNum - numVez > 10 && chuteNum - numVez < 20) {
+        } else if (chuteNum - numVez > 9 && chuteNum - numVez < 20) {
             document.querySelector("#numTenta").innerHTML += `<br>Um pouco alto`;
 
-        } else if (chuteNum - numVez > 1 && chuteNum - numVez < 10) {
+        } else if (chuteNum - numVez > 0 && chuteNum - numVez < 10) {
             document.querySelector("#numTenta").innerHTML += `<br>Desce mais um pouquinho!!`;
 
         }
@@ -51,17 +51,18 @@ function subForm() {
         } else {
             document.querySelector("#numTenta").innerHTML = `Você tentou advinhar ${tentativas} vezes`;
         }
-        
+
         if (Math.abs(chuteNum - numVez) >= 30) {
             document.querySelector("#numTenta").innerHTML += `<br>Muito Baixo`;
+            
 
-        } else if (Math.abs(chuteNum - numVez) > 20 && Math.abs(chuteNum - numVez) < 30) {
+        } else if (Math.abs(chuteNum - numVez) > 19 && Math.abs(chuteNum - numVez) < 30) {
             document.querySelector("#numTenta").innerHTML += `<br>Baixo`;
 
-        } else if (Math.abs(chuteNum - numVez) > 10 && Math.abs(chuteNum - numVez) < 20) {
+        } else if (Math.abs(chuteNum - numVez) > 9 && Math.abs(chuteNum - numVez) < 20) {
             document.querySelector("#numTenta").innerHTML += `<br>Um pouco baixo`;
 
-        } else if (Math.abs(chuteNum - numVez) > 1 && Math.abs(chuteNum - numVez) < 10) {
+        } else if (Math.abs(chuteNum - numVez) > 0 && Math.abs(chuteNum - numVez) < 10) {
             document.querySelector("#numTenta").innerHTML += `<br>Sobe mais um pouquinho!!`;
 
         }
@@ -103,7 +104,7 @@ document.querySelector("#TentaBtn").onclick = function () {
 
 }
 
-document.querySelector("#advNum").blur(function (){
+document.querySelector("#advNum").blur(function () {
     document.querySelector("#advNum").style.transform = "0";
     document.querySelector("#advNum").style.width = "0";
     document.querySelector("#advNum").style.boxShadow = "0";
@@ -114,6 +115,6 @@ document.querySelector("#advNum").addEventListener("click", function () {
     let tira = false;
     if (!tira) {
         document.querySelector("#fa-regular").classList.remove("fa-regular", "fa-hand-pointer");
-    } 
-    
+    }
+
 })
