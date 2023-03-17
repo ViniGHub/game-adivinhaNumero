@@ -22,7 +22,8 @@ function subForm() {
         document.querySelector("#numTenta").innerHTML = `Você perdeu, FRACASSADO <br>O numero da vez era ${numVez}`;
         center.appendChild(recarregar)
         document.querySelector("#numTenta").append(center);
-        document.querySelector('.balao').classList.add('opacity-0');
+        document.querySelector(".fail").style.opacity = "1";
+        document.querySelector(".fail").classList.add("animFail")
         return;
     }
 
@@ -74,7 +75,8 @@ function subForm() {
         }
         vd = true;
         document.querySelector("#numTenta").innerHTML = `Parabéns você advinhou o número da vez em ${tentativas} tentativas<br>`;
-        balao.classList.add("anim")
+        document.querySelector('.balao').style.opacity = "1";
+        balao.classList.add("anim");
         somVit.setAttribute('autoplay', 'autoplay');
         center.appendChild(recarregar);
         document.querySelector("#numTenta").append(center);

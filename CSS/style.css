@@ -7,6 +7,7 @@ body {
 
 audio {
     position: absolute;
+    opacity: 0;
 }
 
 .game {
@@ -122,14 +123,26 @@ input::-webkit-inner-spin-button {
     top: 0;
     position: absolute;
     top: 1100px;
+    opacity: 0;
 }
 
-.opacity-0 {
+.fail {
+    width: 600px;
+    position: absolute;
     opacity: 0;
+    margin-top: 150px;
+    z-index: -10;
+    
 }
 
 .anim {
     animation: balaoSubindo 5s linear infinite;
+}
+
+.animFail {
+    animation: failUp 2.5s linear;
+    z-index: 10;
+    /* opacity: 1; */
 }
 
 .balao img {
@@ -215,6 +228,16 @@ input::-webkit-inner-spin-button {
     }
 }
 
+@keyframes failUp {
+    0% {
+        width: 1px;
+    }
+    100% {
+        width: 600px;
+    }
+
+}
+
 @media (max-height: 930px) {
     .page>h1 {
         font-size: 35px;
@@ -262,7 +285,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 1630px) {
     .page>h1 {
         font-size: 35px;
-        
+
     }
 
 }
@@ -272,28 +295,29 @@ input::-webkit-inner-spin-button {
         width: 100%;
         border-radius: 25px;
     }
+
     .page>h1 {
         font-size: 25px;
         margin: 0 0;
-        
+
     }
 
-     .page>h3 {
-         font-size: 13px;
-     }
+    .page>h3 {
+        font-size: 13px;
+    }
 
-     #numTenta {
+    #numTenta {
         font-size: 13px;
         margin: 0;
         padding: 0;
         line-height: 17px;
-     }
+    }
 
-     #TentaBtn {
+    #TentaBtn {
         font-size: 15px;
         margin-bottom: 0;
         padding-bottom: 0;
 
-     }
+    }
 
 }
