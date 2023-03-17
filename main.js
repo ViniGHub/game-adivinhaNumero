@@ -59,7 +59,7 @@ function subForm() {
 
         if (Math.abs(chuteNum - numVez) >= 30) {
             document.querySelector("#numTenta").innerHTML += `<br>Muito Baixo`;
-            
+
 
         } else if (Math.abs(chuteNum - numVez) > 19 && Math.abs(chuteNum - numVez) < 30) {
             document.querySelector("#numTenta").innerHTML += `<br>Baixo`;
@@ -78,7 +78,11 @@ function subForm() {
             tentativas++;
         }
         vd = true;
-        document.querySelector("#numTenta").innerHTML = `Parabéns você advinhou o número da vez em ${tentativas} tentativas<br>`;
+        if (tentativas == 1) {
+            document.querySelector("#numTenta").innerHTML = `Parabéns você advinhou o número da vez em ${tentativas} tentativa<br>`;
+        } else {
+            document.querySelector("#numTenta").innerHTML = `Parabéns você advinhou o número da vez em ${tentativas} tentativas<br>`;
+        }
         document.querySelector('.balao').style.opacity = "1";
         balao.classList.add("anim");
         somVit.preload = "auto";
@@ -88,6 +92,7 @@ function subForm() {
         document.querySelector("#numTenta").append(center);
 
         return;
+
     }
 
 }
