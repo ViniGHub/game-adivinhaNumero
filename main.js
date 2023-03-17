@@ -23,7 +23,11 @@ function subForm() {
         center.appendChild(recarregar)
         document.querySelector("#numTenta").append(center);
         document.querySelector(".fail").style.opacity = "1";
-        document.querySelector(".fail").classList.add("animFail")
+        document.querySelector(".fail").classList.add("animFail");
+        let somDer = document.querySelector("#somDerrota");
+        somDer.preload = "auto";
+        somDer.volume = .7;
+        somDer.play();
         return;
     }
 
@@ -77,7 +81,9 @@ function subForm() {
         document.querySelector("#numTenta").innerHTML = `Parabéns você advinhou o número da vez em ${tentativas} tentativas<br>`;
         document.querySelector('.balao').style.opacity = "1";
         balao.classList.add("anim");
-        somVit.setAttribute('autoplay', 'autoplay');
+        somVit.preload = "auto";
+        somVit.volume = .4;
+        somVit.play();
         center.appendChild(recarregar);
         document.querySelector("#numTenta").append(center);
 
